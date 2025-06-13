@@ -1,67 +1,62 @@
-# 🧠 Customer Support Agent
 
-This project showcases a simple yet powerful customer support assistant built using [LangGraph](https://github.com/langchain-ai/langgraph), [LangChain](https://github.com/langchain-ai/langchain), and OpenAI's GPT models.
+# Customer Support Agent
 
-It intelligently classifies customer queries into three categories—**Technical**, **Billing**, or **General**—and delivers an appropriate response for each.
+This is a basic but effective customer support assistant built using LangGraph, LangChain, and OpenAI's GPT models. The goal is to automatically categorize incoming user queries as either **Technical**, **Billing**, or **General**, and then provide a relevant, helpful response.
 
----
-
-## 🚀 Features
-
-- Automatic query classification using a language model
-- Modular graph structure powered by LangGraph
-- Easy-to-follow response generation pipeline
-- Fully customizable to support more categories or actions
+The assistant uses a modular graph structure to break down the logic step by step—making it easy to understand, modify, and extend with more features like FAQs, ticket creation, or escalation.
 
 ---
 
-## 🧩 Requirements
+## Features
 
-Install the required libraries:
+- Automatically classifies customer queries using a language model.
+- Generates relevant responses based on the category.
+- Built on a simple graph pipeline for easy customization.
+- Easy to extend for more complex workflows.
 
-```bash
-pip install langgraph langchain openai
+---
+
+## How to Use
+
+1. Clone or download the repository and open the folder.
+
+2. Open the file `customer_support_agent.py` and add your OpenAI API key where it says:
+
+   ```python
+   llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, api_key="your-api-key-here")
+   ```
+
+3. Install the required packages:
+
+   ```bash
+   pip install langgraph langchain openai
+   ```
+
+4. Run the script:
+
+   ```bash
+   python customer_support_agent.py
+   ```
+
+---
+
+## Example
+
+Here’s how it works with a sample query:
+
+```
+Query: My internet is not working since last night.
+Response: Please restart your router and try again. If the issue persists, contact technical support.
 ```
 
 ---
 
-## 🛠️ How to Use
+## Notes
 
-1. **Clone or download** the repository and open the project folder.
+You can use this as a base to build more advanced support tools. Try adding things like:
 
-2. **Set your OpenAI API key** inside `customer_support_agent.py`:
+- Auto-generated support tickets  
+- FAQ search  
+- Escalation to a human agent  
 
-```python
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, api_key="your-api-key-here")
-```
-
-3. **Run the script**:
-
-```bash
-python customer_support_agent.py
-```
-
----
-
-## 📁 Project Files
-
-- `customer_support_agent.py` – Core script that builds and runs the customer support graph.
-
----
-
-## 💬 Example Output
-
-```
-🧠 Query: My internet is not working since last night.
-🤖 Response: Please restart your router and try again. If the issue persists, contact technical support.
-```
-
----
-
-## 🤝 Contributions
-
-You’re welcome to fork and extend this project! Consider adding nodes for FAQs, support ticket generation, or escalation to live agents.
-
----
-
-Made with ❤️ using LangGraph + LangChain.
+This was a fun project to explore how LangGraph workflows can simplify real-world tasks like support automation.
