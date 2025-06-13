@@ -1,4 +1,4 @@
-# 🧠 Customer Support Agent using LangGraph
+# 🧠 Customer Support Agent
 
 This project demonstrates a simple customer support assistant powered by [LangGraph](https://github.com/langchain-ai/langgraph), [LangChain](https://github.com/langchain-ai/langchain), and OpenAI's GPT models.
 
